@@ -8,7 +8,10 @@ public class AddQuesitonDto
     public string UserId { get; set; } = string.Empty!;
 
     public static implicit operator Question(AddQuesitonDto addQuesitonDto)
-    => new(){
-        
-    }
+    => new()
+    {
+        Title = addQuesitonDto.Title,
+        Body = addQuesitonDto.Body,
+        UserId = addQuesitonDto.UserId,
+    };
 }
