@@ -10,6 +10,7 @@ namespace Infrastructure.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+            Database.EnsureCreated();
         }
 
         public DbSet<Answer> Answers { get; set; }
