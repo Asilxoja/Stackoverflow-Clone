@@ -1,6 +1,6 @@
 namespace Application.DTOs.CommentDtos;
 
-public class CommentDto
+public class CommentDto : BaseDto
 {
     public string Body { get; set; } = string.Empty!;
     public int QuestionId { get; set; }
@@ -18,6 +18,7 @@ public class CommentDto
         QuestionId = commentDto.QuestionId,
         UserComment = commentDto.UserComment,
         Answer = commentDto.Answer,
+        Id = commentDto.Id,
         AnswerId = commentDto.AnswerId,
         UserId = commentDto.UserId
     };
@@ -28,6 +29,7 @@ public class CommentDto
         Body = commentDto.Body,
         QuestionId = commentDto.QuestionId,
         UserComment = commentDto.UserComment,
+        Id = commentDto.Id,
         Answer = commentDto.Answer,
         AnswerId = commentDto.AnswerId,
         UserId = commentDto.UserId

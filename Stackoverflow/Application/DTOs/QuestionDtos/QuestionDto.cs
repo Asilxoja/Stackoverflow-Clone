@@ -2,7 +2,7 @@
 
 namespace Application.DTOs.QuestionDtos;
 
-public class QuestionDto
+public class QuestionDto : BaseDto
 {
     public string Title { get; set; } = string.Empty!;
     public string Body { get; set; } = string.Empty;
@@ -16,7 +16,8 @@ public class QuestionDto
             Title = question.Title,
             Body = question.Body,
             UserId = question.UserId,
-            User = question.User
+            User = question.User,
+            Id = question.Id,
         };
 
     public static implicit operator QuestionDto(Question question)
@@ -25,6 +26,7 @@ public class QuestionDto
             Title = question.Title,
             Body = question.Body,
             UserId = question.UserId,
+            Id = question.Id,
             User = question.User
         };
 }

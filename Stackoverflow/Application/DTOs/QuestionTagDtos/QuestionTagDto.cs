@@ -1,6 +1,6 @@
 namespace Application.DTOs.QuestionTagDtos;
 
-public class QuestionTagDto
+public class QuestionTagDto : BaseDto
 {
     public int QuestionId { get; set; }
     public int TagId { get; set; }
@@ -10,12 +10,14 @@ public class QuestionTagDto
     {
 
         QuestionId = addQuestionTagDto.QuestionId,
+        Id = addQuestionTagDto.Id,
         TagId = addQuestionTagDto.TagId
     };
     public static implicit operator QuestionTagDto(QuestionTag addQuestionTagDto)
     => new()
     {
         QuestionId = addQuestionTagDto.QuestionId,
+        Id = addQuestionTagDto.Id,
         TagId = addQuestionTagDto.TagId
     };
 }
